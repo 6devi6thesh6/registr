@@ -2,22 +2,46 @@
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 10px;
+    opacity: 1;
+    transition: opacity .3s ease-out;
+}
+
+.container.not-vid {
+    opacity: 0;
 }
 
 body {
     background-color: #fff4e1;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .name_log-up {
     font-size: 24px;
     text-align: center;
     margin-bottom: 15px;
-    margin-left: -45px;
+    margin-left: 85px;
     color: rgba(0, 0, 0, 0.8);
+    font-weight: 700;
 }
 
-.name_log-up span {
-    margin-left: 120px;
+.vhod {
+    margin-left: 40%;
+    margin-top: -50px;
+    margin-bottom: 25px;
+    font-weight: 600;
+    padding: 0;
+    font-size: 26px;
+}
+
+.reg-b {
+    font-weight: 600;
+    padding: 0;
+    margin-left: 25%;
+    margin-bottom: 25px;
+}
+
+.reg-na {
+    margin-left: 100px;
 }
 
 .log_up {
@@ -45,42 +69,42 @@ body {
     left: -9999px;
 }
 
+.in-up::before {
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
+    position: absolute;
+    left: 80px;
+    top: 10px;
+    content: 'Войти';
+    font-family: 'Montserrat', sans-serif;    
+}
+.in::before {
+    font-weight: 500;
+    font-style: 16px;
+    color: #000;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    content: 'Зарегистрироваться';
+    font-family: 'Montserrat', sans-serif; 
+}
+
+
 .checkbox:checked+label,
 .checkbox:not(:checked)+label {
     position: relative;
     display: block;
+    height: 40px;
     text-align: center;
-    width: 60px;
-    height: 16px;
+    width: 220px;
     border-radius: 8px;
     padding: 0;
     margin: 10px auto;
     cursor: pointer;
-    background-color: #ffeba7;
-}
+    background-color: #e67a7a7e;
+    border: 1px solid #00000081;
 
-.checkbox:checked+label:before,
-.checkbox:not(:checked)+label:before {
-    position: absolute;
-    display: block;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    color: #ffebb7;
-    background-color: #e67a7a;
-    font-family: 'unicons';
-    content: '⬉';
-    z-index: 20;
-    top: -10px;
-    left: -10px;
-    line-height: 36px;
-    text-align: center;
-    font-size: 24px;
-    transition: all 0.5s ease;
-}
-
-.checkbox:checked+label:before {
-    transform: translateX(44px) rotate(-270deg);
 }
 
 .card-3d-wrap {
@@ -109,7 +133,7 @@ body {
 .card-back {
     width: 100%;
     height: 100%;
-    background-color: #ffebb7;
+    background-color: #9ddcdc;
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: 300%;
@@ -154,33 +178,33 @@ body {
 
 .form-group input::-moz-placeholder {
     color: #000;
-    opacity: 0.7;
+    opacity: 0.9;
     -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
 
 .form-group input:-moz-placeholder {
     color: #000;
-    opacity: 0.7;
+    opacity: 0.9;
     -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
 
 .form-group input::-webkit-input-placeholder {
     color: #000;
-    opacity: 0.7;
+    opacity: 0.9;
     -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
 
 .form-group input:focus:-ms-input-placeholder {
-    opacity: 0;
+    opacity: 0.9;
     -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
 
 .form-group input:focus::-moz-placeholder {
-    opacity: 0;
+    opacity: 0.9;
     -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
@@ -199,56 +223,53 @@ body {
 
 /* Поля заполнения */
 
+.pass,
+.repeatpass,
+.email,
 .login {
     width: 340px;
-    height: 50px;
+    height: 40px;
     font-size: 16px;
-    background-color: #fff;
-    border: none;
-    border-radius: 4px;
-    color: #000;
-}
-
-.pass, .repeatpass, .email {
-    width: 340px;
-    height: 50px;
-    font-size: 16px;
-    margin-top: 5px;
+    margin-top: 8px;
     color: #000;
     background-color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 9px;
+    border-bottom: 1px solid #000;
+    padding: 5px 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
 }
 
 .log-btn {
-    padding: 8px 57px;
-    font-size: 18px;
+    width: 210px;
+    margin-left: 19%;
+    font-size: 20px;
     color: #000;
-    margin-top: 15px;
-    border-radius: 5px;
-    background-color: #e67a7a;
+    margin-top: 45px;
     border: none;
-    margin-left: 25%;
     cursor: pointer;
     transition: color .4s ease-out;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 }
 
 .reg {
-    padding: 8px 57px;
     font-size: 18px;
     color: #000;
     margin-top: 15px;
-    border-radius: 5px;
-    background-color: #e67a7a;
     border: none;
-    margin-left: 10%;
+    margin-left: 22%;
     cursor: pointer;
     transition: color .4s ease-out;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 }
 
 .log-btn:hover {
     color: #fff;
 }
+
 .reg:hover {
     color: #fff;
 }
