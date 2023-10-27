@@ -1,24 +1,37 @@
 <?php
+session_start();
 require_once('db.php');
 
 $login = $_POST['login'];
 $pass = $_POST['pass'];
 
 if (empty($login) || empty($pass)) {
-    echo "Заполните все поля";
+    $_SESSION['message-log'] = 'Заполните все поля!';
+    header('Location:index.php');
 } else {
-    //Расхеширование пароля
+    //Xеширование пароля
     $pass = md5($pass . "fd");
-    $sql = "SELECT * FROM `users` WHERE login = '$login' AND pass = '$pass'";
-    $result = $conn->query($sql);
+    $check_users = mysqli_query($conn, "SELECT * FROM `users` WHERE `login`='$login' and `pass` = '$pass'");
+    if(mysqli_num_rows($check_users) == 1) {
 
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            echo "Добро пожаловать " . $row['login'];
-            setcookie('useret', $row['login'], time() + 3600, "/");
-            header('Location: /');
-        }
-    } else {
-        echo "Нет такого пользователя!";
+        $user = mysqli_fetch_assoc($check_users);
+
+        $_SESSION["user"] = [
+          "id" =>  $user["id"],
+          "username"=> $user["username"],
+          "email"=> $user["email"],
+          "pass"=> $user["pass"]
+        ];
+        header("Location:acount/index.php");
+    }else {
+        $_SESSION['message-log'] = 'Нет такого пользователя!';
+        header('Location:index.php');
     }
+
+    // if ($result->num_rows > 0) {
+    //     $user = 
+    //     $_SESION['user'] = [
+    //         "id"=>user
+    //     ] 
+    //} 
 }

@@ -1,5 +1,10 @@
+:root {
+    --jots: 'Jost', sans-serif;
+    ;
+}
+
 .container {
-    max-width: 1280px;
+    max-width: 960px;
     margin: 0 auto;
     padding: 0 10px;
     opacity: 1;
@@ -13,6 +18,8 @@
 body {
     background-color: #fff4e1;
     font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .name_log-up {
@@ -24,10 +31,148 @@ body {
     font-weight: 700;
 }
 
+.top-header {
+    text-align: center;
+}
+
+.search {
+    color: rgba(0, 0, 0, 0.50);
+    text-align: center;
+    font-family: var(--jots);
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    padding: 12px 185px;
+    border-radius: 30px;
+    border: 1px solid #000;
+    background-color: #FFF4E1;
+    cursor: pointer;
+    transition: color .3s ease-out;
+}
+
+.search:hover {
+    color: rgba(0, 0, 0, 0.80);
+}
+
+.search:focus:-moz-placeholder {
+    opacity: 0;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+.search:focus::-webkit-input-placeholder {
+    opacity: 0;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+
+/* Альбомы */
+.alboms {
+    display: grid;
+    grid-template-columns: repeat(5, 136px);
+    text-align: center;
+    gap: 82px 66px;
+    margin-top: 40px;
+}
+
+.albom-img {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.albom {
+    position: relative;
+}
+
+.bag {
+    position: absolute;
+    top: -10px;
+    left: 5px;
+    width: 126px;
+
+}
+
+.title-albom-link {
+    color: #000;
+    text-align: center;
+    font-family: var(--jots);
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+}
+
+
+/* Главная кнопка */
+.glav {
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+    border: 1px solid #fff4e1;
+    color: #000;
+    text-align: center;
+    font-family: var(--jots);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    border-radius: 12px;
+    padding: 10px 37px;
+    background-color: inherit;
+    transition: all .5s ease-out;
+    cursor: pointer;
+}
+
+.glav:hover {
+    border: 1px solid #000;
+    background-color: #ffebb7;
+}
+
+/* Панелька */
+.panel {
+    display: block;
+    margin: 0 auto;
+    margin-top: 9px;
+    padding: 0;
+    text-align: center;
+    width: 690px;
+    border-radius: 92px 92px 0 0;
+    background-color: #9DDCDC;
+    height: 68px;
+    bottom: 0;
+}
+
+.house-panel {
+    cursor: pointer;
+}
+
+.search-panel {
+    margin-left: 102px;
+    cursor: pointer;
+}
+
+.profile-panel {
+    margin-left: 102px;
+    cursor: pointer;
+    margin: 0;
+}
+.profile-link {
+    background-color: inherit;
+    padding: 0;
+    margin: 0;
+    margin-left: 102px;
+    border: none;
+    
+}
+
+/* modal */
 .vhod {
     margin-left: 40%;
-    margin-top: -50px;
-    margin-bottom: 25px;
+    margin-top: -10px;
+    margin-bottom: 35px;
     font-weight: 600;
     padding: 0;
     font-size: 26px;
@@ -74,20 +219,21 @@ body {
     font-size: 16px;
     color: #000;
     position: absolute;
-    left: 80px;
+    left: 20px;
     top: 10px;
-    content: 'Войти';
-    font-family: 'Montserrat', sans-serif;    
+    content: 'Зарегистрироваться';
+    font-family: 'Montserrat', sans-serif;
 }
+
 .in::before {
     font-weight: 500;
     font-style: 16px;
     color: #000;
     position: absolute;
-    left: 20px;
+    left: 80px;
     top: 10px;
-    content: 'Зарегистрироваться';
-    font-family: 'Montserrat', sans-serif; 
+    content: 'Войти';
+    font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -272,4 +418,11 @@ body {
 
 .reg:hover {
     color: #fff;
+}
+
+/* Ошибка при регистрации */
+.msg {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
 }

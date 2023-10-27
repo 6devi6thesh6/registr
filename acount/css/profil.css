@@ -1,0 +1,355 @@
+:root {
+    --jots: 'Jost', sans-serif;
+    ;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff4e1;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 10px;
+    margin-top: 25px;
+}
+
+/* Кнопка выхода */
+.exit {
+    margin-top: 30px;
+    color: #000;
+    padding: 9px 10px;
+    text-align: center;
+    font-family: var(--jots);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    background-color: #DAC0B7;
+    border: 1px solid #fff4e1;
+    border-radius: 12px;
+    width: 175px;
+    transition: border .4s ease-out;
+}
+
+.exit:hover {
+    border: 1px solid #000;
+}
+
+/* все альбомы */
+.albom-max {
+    width: 175px;
+    padding: 6px 10px;
+    text-align: center;
+    color: #000;
+    font-family: var(--jots);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border: 1px solid #FFF4E1;
+    border-radius: 12px;
+    background-color: inherit;
+    transition: border .4s ease-out;
+}
+
+.albom-max:hover {
+    border: 1px solid #000;
+}
+
+/* Кнопки эти  */
+.button-left {
+    display: grid;
+    grid-template-columns: repeat(1, 100px);
+    margin-left: 50%;
+}
+
+/* Поиск хелдер */
+.search:focus:-moz-placeholder {
+    opacity: 0;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+.search:focus::-webkit-input-placeholder {
+    opacity: 0;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+/* error-photo */
+.photo-error {
+    margin: 0;
+    padding: 0;
+    display: inline;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.img-photo-bd {
+    max-width: 400px;
+    max-height: 200px;
+    margin-top: 25px;
+}
+
+.img-photo-bd+.img-photo-bd {
+    margin-left: 15px;
+}
+
+
+/* Меню */
+.top-header {
+    margin-top: 21px;
+    text-align: center;
+}
+
+.search {
+    color: rgba(0, 0, 0, 0.50);
+    text-align: center;
+    font-family: var(--jots);
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    padding: 12px 279px;
+    border-radius: 30px;
+    border: 1px solid #000;
+    background-color: #FFF4E1;
+    cursor: pointer;
+    transition: color .3s ease-out;
+}
+
+.search:hover {
+    color: rgba(0, 0, 0, 0.80);
+}
+
+.content-cite {
+    display: flex;
+}
+
+.right-cite {
+    margin: 0;
+    padding: 0;
+    margin-top: 80px;
+}
+
+.header {
+    display: flex;
+    border-bottom: 1px solid #000;
+    padding-bottom: 52px;
+}
+
+.logo {
+    color: #000;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* кнопки шабки */
+.buttons-header {
+    display: flex;
+}
+
+.albom-new {
+    padding: 5px 40px 5px 40px;
+    background-color: rgba(255, 235, 183, 1);
+    border: 1px solid rgba(255, 235, 183, 1);
+    border-radius: 12px;
+    transition: border .3s ease-out;
+    margin-left: 67px;
+    cursor: pointer;
+}
+.albom-new:hover {
+    border: 1px solid #000;
+}
+.smc {
+    padding: 5px 43px 5px 43px;
+    background-color: rgba(255, 235, 183, 1);
+    border: 1px solid rgba(255, 235, 183, 1);
+    border-radius: 12px;
+    transition: border .3s ease-out;
+    margin-left: 67px;
+    cursor: pointer;
+}
+.smc-i, .scms {
+    display: none;
+}
+
+
+.smc:hover {
+    border: 1px solid #000;
+}
+
+.subscribe {
+    margin-left: 50px;
+    padding: 0 37px;
+    background-color: rgba(255, 235, 183, 1);
+    border: 1px solid rgba(255, 235, 183, 1);
+    border-radius: 12px;
+    transition: border .3s ease-out;
+    cursor: pointer;
+}
+
+.subscribe:hover {
+    border: 1px solid #000;
+}
+
+.egs {
+    border: none;
+    background-color: inherit;
+    margin-left: 82px;
+    cursor: pointer;
+}
+
+.menu {
+    border: none;
+    margin-left: 82px;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+/* лого */
+.content-cite {
+    display: flex;
+    position: relative;
+}
+
+/* Левая часть */
+.logo-img {
+    position: absolute;
+    margin-left: 80px;
+    margin-top: 100px;
+}
+
+.left-cite {
+    margin-top: 80px;
+}
+
+.logo-img {
+    margin-top: 0;
+}
+
+/* Альбомы */
+
+
+.albom-profil {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(2, 102px);
+    text-align: center;
+    gap: 23px 65px;
+    margin-top: 40px;
+    top: 376px;
+    left: 66px;
+}
+
+.albom-img {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.albom {
+    position: relative;
+    border: 1px solid #fff4e1;
+    transition: all .4s ease-out;
+    border-radius: 50%;
+
+}
+
+.albom:hover {
+    border: 1px solid #000;
+}
+
+.bag {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    min-width: 122px;
+
+}
+
+.title-albom-link {
+    color: #000;
+    text-align: center;
+    font-family: var(--jots);
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+}
+
+
+/* Главная кнопка */
+.glav {
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+    border: 1px solid #000;
+    color: #000;
+    text-align: center;
+    font-family: var(--jots);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    border-radius: 12px;
+    padding: 10px 37px;
+    background-color: inherit;
+}
+/* Альбом */
+.albom-list {
+    min-height: 715px;
+    max-height: 715px;
+    height: 100%;
+    overflow: scroll;
+    display: grid;
+    grid-template-columns: repeat(3, 279px);
+    gap:28px 46px;
+    width: 955px;
+}
+.albom-list::-webkit-scrollbar { width: 0; }
+.img-photo-bd {
+    max-width: 279px;
+    width: 100%;
+    max-height: 312px;
+    height: 100%;
+    border-radius:10px ;
+}
+.img-vid {
+    cursor: pointer;
+    border: none;
+    background-color: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+/* Панелька */
+.panel {
+    display: block;
+    margin: 0 auto;
+    margin-top: 9px;
+    padding: 0;
+    text-align: center;
+    width: 690px;
+    border-radius: 92px 92px 0 0;
+    background-color: #9DDCDC;
+    height: 68px;
+    bottom: 0;
+}
+
+
+.house-panel {
+    cursor: pointer;
+}
+
+.search-panel {
+    margin-left: 102px;
+    cursor: pointer;
+}
+
+.profile-panel {
+    margin-left: 102px;
+    cursor: pointer;
+}

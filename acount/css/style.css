@@ -1,0 +1,256 @@
+:root {
+    --jots: 'Jost', sans-serif;
+    ;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff4e1;
+}
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 10px;
+    margin-top: 25px;
+}
+
+/* Кнопка выхода */
+.exit {
+    border: 2px solid #000;
+    color: #000;
+    font-size: 18px;
+    padding: 12px 37px;
+    font-weight: 600;
+    border-radius: 0 10px 0 10px;
+    background-color: #e67a7a;
+}
+
+.search:focus:-moz-placeholder {
+    opacity: 0;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+.search:focus::-webkit-input-placeholder {
+    opacity: 0;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+/* Форма добавления */
+.form-photo {
+    margin-top: 75px;
+}
+
+/* error-photo */
+.photo-error {
+    margin: 0;
+    padding: 0;
+    display: inline;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.img-photo-bd {
+    max-width: 400px;
+    max-height: 200px;
+    margin-top: 25px;
+}
+.img-photo-bd + .img-photo-bd {
+    margin-left: 15px;
+}
+
+
+/* Меню */
+.top-header {
+    margin-top: 21px;
+    text-align: center;
+}
+
+.search {
+    color: rgba(0, 0, 0, 0.50);
+    text-align: center;
+    font-family: var(--jots);
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    padding: 12px 279px;
+    border-radius: 30px;
+    border: 1px solid #000;
+    background-color: #FFF4E1;
+    cursor: pointer;
+    transition: color .3s ease-out;
+}
+
+.search:hover {
+    color: rgba(0, 0, 0, 0.80);
+}
+
+.content-cite {
+    display: flex;
+}
+
+.right-cite {
+    margin: 0;
+    padding: 0;
+    margin-top: 80px;
+}
+
+.header {
+    display: flex;
+    border-bottom: 1px solid #000;
+    padding-bottom: 52px;
+}
+
+.logo {
+    color: #000;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* кнопки шабки */
+.buttons-header {
+    display: flex;
+}
+
+.smc {
+    padding: 5px 43px 5px 43px;
+    background-color: rgba(255, 235, 183, 1);
+    border: 1px solid rgba(255, 235, 183, 1);
+    border-radius: 12px;
+    transition: border .3s ease-out;
+    margin-left: 67px;
+    cursor: pointer;
+}
+
+.smc:hover {
+    border: 1px solid #000;
+}
+
+.subscribe {
+    margin-left: 50px;
+    padding: 0 37px;
+    background-color: rgba(255, 235, 183, 1);
+    border: 1px solid rgba(255, 235, 183, 1);
+    border-radius: 12px;
+    transition: border .3s ease-out;
+    cursor: pointer;
+}
+
+.subscribe:hover {
+    border: 1px solid #000;
+}
+
+.egs {
+    border: none;
+    background-color: inherit;
+    margin-left: 82px;
+    cursor: pointer;
+}
+
+.menu {
+    border: none;
+    margin-left: 82px;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+/* лого */
+.content-cite {
+    display: flex;
+    position: relative; 
+}
+/* Левая часть */
+.logo-img {
+    position: absolute;
+    margin-left: 80px;
+    margin-top: 100px;
+}
+.left-cite {
+    margin-top: 80px;
+ }
+ .logo-img {
+     margin-top: 0;
+ }
+
+/* Альбомы */
+
+.alboms {
+    display: grid;
+    grid-template-columns: repeat(5, 136px);
+    text-align: center;
+    gap: 82px 66px;
+    margin-top: 40px;
+}
+
+.albom-img {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.albom {
+    position: relative;
+}
+
+.bag {
+    position: absolute;
+    top: -10px;
+    left: 5px;
+    width: 126px;
+
+}
+
+.title-albom-link {
+    color: #000;
+    text-align: center;
+    font-family: var(--jots);
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+}
+
+
+/* Главная кнопка */
+.glav {
+    margin: 0 auto;
+    display: block;
+    margin-top: 30px;
+    border: 1px solid #000;
+    color: #000;
+    text-align: center;
+    font-family: var(--jots);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    border-radius: 12px;
+    padding: 10px 37px;
+    background-color: inherit;
+}
+/* Панелька */
+.panel {
+    display: block;
+    margin: 0 auto; 
+    margin-top: 21px;
+    padding: 0;
+    text-align: center;
+    width: 690px;
+    border-radius: 92px 92px 0 0;
+    background-color: #9DDCDC;
+    height: 68px;
+    bottom: 0;
+}
+.house-panel {
+    cursor: pointer;
+}
+.search-panel {
+    margin-left: 102px;
+    cursor: pointer;
+}
+.profile-panel {
+    margin-left: 102px;   
+    cursor: pointer;  
+}
